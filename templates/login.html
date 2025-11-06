@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SyncUp Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container" style="max-width:400px;text-align:center;">
+  <h2>SyncUp Login</h2>
+  {% if error %}<p style="color:red;">{{ error }}</p>{% endif %}
+  <form method="POST">
+    <input type="email" name="email" placeholder="College Email" required><br><br>
+    <input type="password" name="password" placeholder="Password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <p>or Login with Google (Mock)</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SyncUp Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="navbar">
+  <div><strong>SyncUp</strong></div>
+  <div>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/studyhub">Study Hub</a>
+    <a href="/teachers">Teachers</a>
+    <a href="/skillswap">SkillSwap</a>
+    <a href="/profile">Profile</a>
+    <a href="/logout">Logout</a>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Welcome back, Vaibhav!</h2>
+  <p>Friday, 7 November 2025</p>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Group Study Hub</h3>
+      <p>Collaborate with peers and schedule sessions.</p>
+      <p><b>12</b> Active Rooms</p>
+      <button onclick="location.href='/studyhub'">View</button>
+    </div>
+    <div class="card">
+      <h3>Teacher’s Cabin Tracker</h3>
+      <p>Check teacher availability and book appointments.</p>
+      <p><b>8</b> Available Now</p>
+      <button onclick="location.href='/teachers'">View</button>
+    </div>
+    <div class="card">
+      <h3>SkillSwap Marketplace</h3>
+      <p>Post or bid on campus tasks.</p>
+      <p><b>24</b> Open Tasks</p>
+      <button onclick="location.href='/skillswap'">View</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
