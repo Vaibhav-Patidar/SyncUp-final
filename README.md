@@ -1,6 +1,6 @@
 
 🔗 SyncUp – The Smart Campus Companion
-
+https://syncup-final-1.onrender.com/login (credentials - email = vaibhav@college.edu.in password= 1234)
 SyncUp is a unified campus platform that makes student life smarter, more connected, and efficient.
 It helps students collaborate in study groups, check teacher availability, and exchange help or tasks with peers — all within a single app.
 
