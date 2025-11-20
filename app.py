@@ -36,7 +36,7 @@ def logout():
 
 @app.route("/dashboard")
 def dashboard():
-    return render_template("dashboard.html")
+    return render_template("dashboard.html", name=session.get("name"))
 
 @app.route("/studyhub")
 def studyhub():
