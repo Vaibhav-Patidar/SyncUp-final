@@ -38,7 +38,7 @@ from datetime import datetime
 
 @app.route("/dashboard")
 def dashboard():
-    today = datetime.now().strftime("%A, %d %B %Y")  # Example: Friday, 07 November 2025
+    today = datetime.now().strftime("%A, %d %B %Y")  
     return render_template("dashboard.html", name=session.get("name"), date=today)
 
 @app.route("/studyhub")
