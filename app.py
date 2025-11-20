@@ -4,7 +4,11 @@ app = Flask(__name__)
 app.secret_key = "syncup_secret_key"
 
 # Mock users
-users = {"vaibhav@college.edu.in": "1234", "sainipriyanshi@college.edu.in": "0000"}
+users = {
+    "vaibhav@college.edu.in": {"password": "1234", "name": "Vaibhav Patidar"},
+    "sainipriyanshi@college.edu.in": {"password": "0000", "name": "Priyanshi Saini"}
+}
+
 
 @app.route("/")
 def home():
@@ -17,8 +21,9 @@ def login():
     if request.method == "POST":
         email = request.form["email"]
         password = request.form["password"]
-        if email in users and users[email] == password:
+        if email in users and users[email]["password"] == password:
             session["user"] = email
+            session["name"] = users[email]["name"]
             return redirect(url_for("dashboard"))
         else:
             return render_template("login.html", error="Invalid credentials")
@@ -47,7 +52,9 @@ def skillswap():
 
 @app.route("/profile")
 def profile():
-    return render_template("profile.html")
+    if "name" in session:
+        return render_template("profile.html", name=session["name"])
+    return redirect(url_for("login"))
 
 if __name__ == "__main__":
     app.run(debug=True)
