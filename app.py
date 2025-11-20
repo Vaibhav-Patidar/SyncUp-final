@@ -4,7 +4,7 @@ app = Flask(__name__)
 app.secret_key = "syncup_secret_key"
 
 # Mock users
-users = {"vaibhav@college.edu.in": "1234"}
+users = {"vaibhav@college.edu.in": "1234", "sainipriyanshi@college.edu.in": "0000"}
 
 @app.route("/")
 def home():
