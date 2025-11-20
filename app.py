@@ -34,9 +34,12 @@ def logout():
     session.pop("user", None)
     return redirect(url_for("login"))
 
+from datetime import datetime
+
 @app.route("/dashboard")
 def dashboard():
-    return render_template("dashboard.html", name=session.get("name"))
+    today = datetime.now().strftime("%A, %d %B %Y")  # Example: Friday, 07 November 2025
+    return render_template("dashboard.html", name=session.get("name"), date=today)
 
 @app.route("/studyhub")
 def studyhub():
