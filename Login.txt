@@ -1,3 +1,7 @@
-on the login page 
-email - vaibhav@college.edu.in
-password - 1234
+On the login page 
+ 1. email - vaibhav@college.edu.in
+    password - 1234
+ 2. email - sainipriyanshi@college.edu.in
+    password - 0000
+  
+
